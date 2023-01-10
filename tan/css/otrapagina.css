@@ -1,0 +1,35 @@
+
+/*h1{
+    color: rgb(165, 106, 243);
+    text-align: center;
+    font-style: italic;
+}*/
+/**{ 
+    background-color:rgb(82, 101, 101)
+}*/
+ header >h1{ /*selectores combinadores*/
+    color: rgb(165, 106, 243);
+    text-align: center;
+    font-style: italic;
+    background-color: rgb(246, 246, 240);
+}
+nav >ul{
+    display: flex;
+    justify-content: center;
+    background-color: rgb(95, 193, 193);
+    width: 960px;
+    height: 50px;
+    border-radius: 30px;
+}
+li{
+    padding: 15px;
+    font-size: 25px;
+    list-style-type: none;
+}
+a[href="index.html"]{
+    color: red;
+}
+footer{
+    text-align: center;
+    
+}

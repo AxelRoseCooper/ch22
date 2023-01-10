@@ -1,0 +1,41 @@
+/* selector universal*/
+*{ 
+    background-color:rgb(166, 203, 203)
+}
+/*Selector de tipo*/
+h1 {
+    color: blanchedalmond;
+    text-align: center;
+}
+h2{
+    color: aquamarine;
+    font-family: 'Chivo Mono', monospace;
+}
+/* Selector de clase*/
+.integrantes{
+    color: aliceblue;
+    background-color: chocolate;
+}
+/*selectores de id
+permite seleccionar un elemento con un id especifico*/
+
+#sabores{
+    color: azure;
+    
+}
+table {
+text-align: center;
+border: 2px solid black;
+
+}
+td,th {
+    text-align: center;
+    border: 1px solid blue;
+    
+    }
+.tabla-dos{
+    al
+    text-align: center;
+    border: 2px solid green;
+
+}

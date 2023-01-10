@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto</title>
+    <link rel="icon" type="image/x-icon" href="assets/img/mando (1).png"/>
+    <link rel="stylesheet" href="contacto.css" type="text/css">
+</head>
+<body>
+    <header>
+        <h1>Contactanos</h1>
+    </header>
+    <main>
+        <section>
+            <form action="" method="post">
+                <fieldset>
+                    <legend>Datos personales</legend>
+                    <label for="name">Nombre:</label>
+                    <input id="name" type="text" placeholder="Nancy Moreno" required>
+                    <br>
+                    <label for="last-name">Apellido:</label>
+                    <input id="last-name" type="text" placeholder="Moreno" required>
+                    <br>
+                    <label for="email">Correo electrónico:</label>
+                    <input type="email" placeholder="tucorreo@correo.com">
+                </fieldset>
+                <fieldset>
+                    <legend>Datos del pedido:</legend>
+                    <input type="number">
+                </fieldset>
+                <fieldset>
+                    <legend>Datos del envio:</legend>
+                    <select name="stores" id="stores">
+                        <option value="Sucursal Azcapotzalco">Sucursal Azcapotzalco</option>
+                        <option value="Sucursal 2">Sucursal 2</option>
+                        <option value="Sucursal Cd. Alegre">Sucursal Cd. Alegre</option>
+                        <option value="Envio a domicilio">Envio a domicilio</option>
+                    </select>
+                    
+                    <input list="storestwo">
+                    <datalist id="storestwo">
+                        <option value="Sucursal Azcapotzalco">Sucursal Azcapotzalco</option>
+                        <option value="Sucursal 2">Sucursal 2</option>
+                        <option value="Sucursal Cd. Alegre">Sucursal Cd. Alegre</option>
+                        <option value="Envio a domicilio">Envio a domicilio</option>
+
+                    </datalist>
+                    <br>
+                    <br>
+                    <input id="delivery" type="radio" name="typeofdelivery"> Recoger en Sucursal
+                    <input id="domicilio" type="radio" name="typeofdelivery"> Recoger en casa
+                    <br>
+                    <br>
+
+                    <label for="verified">
+                    <input id="verified"type="checkbox">He leido los terminos
+                    </label>
+                    <br>
+                    <br>
+                    <input type="submit">
+                    <br><br>
+
+                    <button type="submit"> Listo</button>
+
+
+                </fieldset>
+            </form>
+        </section>
+    </main>
+</body>
+</html>
