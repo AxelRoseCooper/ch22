@@ -120,3 +120,28 @@ console.log("Factorial 3 = " + factoriaConCicloFor(3) ); //6
 console.log("Factorial 5 = " + factoriaConCicloFor(5) ); //120
 console.log("Factorial 3 = " + factorialConRecursion(3) ); //6
 console.log("Factorial 5 = " + factorialConRecursion(5) ); //120
+
+//hacer una recursion que muestre en consola un saludo como
+/*
+Saludo 1
+Saludo 2
+Saludo 3.... Saludo X
+Ej.Saludo (10)
+
+*/
+/*function saludoRecursion(a){
+    if (a >= 1) return "saludo " + a + " " + saludoRecursion(a-1); 
+    return"Bye";
+} 
+console.log( saludoRecursion(10));*/
+
+function saludoRecursion(a){
+    if (a > 1) 
+     saludoRecursion(a-1);  
+   return  console.log( "Saludo " + a);
+   
+   
+    
+
+} 
+console.log(saludoRecursion(10));
