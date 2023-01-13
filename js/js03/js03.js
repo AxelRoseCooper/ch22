@@ -147,7 +147,7 @@ console.log(` Switch - ${nombrePersona} tu reloj es ${marcaReloj}`);
 */
 
 
-let mesAño = prompt("Que numero de mes quieres?");
+let mesAño = "1"
 let temporada = '';
 let mes='';
 switch(mesAño){
@@ -206,3 +206,18 @@ switch(mesAño){
 }
 console.log(`Mes:  ${mesAño}`);
 console.log(` En  ${mes} la temporada es ${temporada}`);
+
+//---------Refactorizando con operador ternario 
+function factorial( number ){
+    if( number < 1) 
+        return 1;
+    return number * factorial( number - 1 )
+}
+console.log("Factorial 5 = " + factorial(5) ); //120
+//refactorizacion
+function factorial( number ){
+    return number < 1 ? 1 :  number * factorial( number - 1 )
+}
+console.log("Factorial 5 = " + factorial(6) ); //120
+
+2
