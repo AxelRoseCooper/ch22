@@ -96,11 +96,158 @@ console.log(`ForIn ${ arma} tiene ${ armasCh22[arma]}`);
   for (let i = armasCh22.length -1; i>=0; i--) 
 console.log(`Indice ${i}tiene: ${armasCh22[i]}`);
 
+//para el ciclo for no es necesario indicar el inicio
+//la comparacion , la expresion final
+
+let iteracion=0;
+for (; ; ){
+    console.log("Valor del i " + iteracion);
+    if (iteracion ===10) break;
+    iteracion ++;
+
+}
+// La instruccion break rompe con la iteracion.
+// La instruccion continue continua con la sig. iteracion .
+
+for (let i = 0; i <= 10; i++) {
+if (i===5) break;
+console.log("For con break: " + i);//0,1,2,3,4
+}
+for (let i = 0; i <= 10; i++) {
+    if (i===5) continue;
+    console.log("For con break: " + i);//0,1,2,3,4   
+}
+
+// [ [] , [] , []]
+const participantes = [ 
+    ["Jose", "Maria", "Pedro"] , //Fila 1
+["Tan","Juan", "Marcos","Santi"] , //Fila 2
+["Mel", "Pavel" ]
+]; //Fila 3
+
+                                                //Feliz cumpleaños;
+                                                //F     C
+console.log("Persona CH3 (f2) 2da persona (c1)" + participantes[2][1]);
+console.log("Persona CH3 (f1) 1ra persona (c1)" + participantes[1][0]);
+console.log("Persona CH3 (f2) 3ra persona (c1)" + participantes[0][2]);
+
+for (let fila = 0; fila < participantes.length; fila++) {
+    console.log(participantes[fila]);
+    for (let columna = 0; columna < participantes[fila].length; columna++) {
+        console.log(participantes[fila][columna]);
+    }   
+}
+//USando break en ciclos anidados 
+//Dejar de mostar los nombres, cuando se encuentre Tan.
+let continuarIteraciones = true;
+for (fila = 0 ; fila < participantes.length; fila++) {
+    if (continuarIteraciones){
+        for(columna = 0; columna< participantes[fila].length; columna++){
+            if(continuarIteraciones)
+            console.log("Uso de break "+ participantes[fila][columna]);
+            if( participantes[fila][columna]==="Tan") continuarIteraciones=false;
+        }
+    }
+    
+}
+//Usando break
+ciclofila:
+for (fila = 0 ; fila < participantes.length; fila++) {
+   ciclocolumna:
+        for(columna = 0; columna< participantes[fila].length; columna++){
+            console.log(`[${fila}][${columna}]`);
+            console.log("Uso de break "+ participantes[fila][columna]);
+            if( participantes[fila][columna]==="Tan") break ciclofila;
+        }
+    }
+    
+
+// Usando continue
+ciclofila:
+for (fila = 0 ; fila < participantes.length; fila++) {
+   ciclocolumna:
+        for(columna = 0; columna< participantes[fila].length; columna++){
+            if( participantes[fila][columna]==="Tan") continue ciclocolumna;
+            console.log(`[${fila}][${columna}]`);
+            console.log("Uso de break "+ participantes[fila][columna]);
+            
+        }
+    }
+    
+/* Ciclo while 
+sintaxis:
+    while(condicion_verdadera) instruccion;
+
+    while(condicion_verdadera){
+        instruccion;
+
+    }
+    */
+
+ /*let numIteracion = 0;
+    while (confirm ("¿ quieres seguir iterando?") ) {
+        console.log("Iteracion n. " +  numIteracion++);
+    }*/
+
+
+    //Preguntar del 1 al 10 y saber si es el numero que penso el usuario
+/* let numeroPensar = 1;
+while (!confirm (`${numeroPensar} es tu numero`) ) {
+    numeroPensar++;
+    if (numeroPensar ===10) break;
+}
+console.log("Tu numero es el " + numeroPensar); */
+
+//Lo de arriba pero mas compacto 
+
+/* let numeroPensar = 1;
+while (!confirm (`${numeroPensar++} es tu numero`) );
+console.log("Tu numero es el " + --numeroPensar); */
+//Ciclo do-while
+
+/*Sintaxis:
+    do {
+        instrucciones;
+        } while (condicion_verdadera);
+    }
+ */
+
+    let valor = 10;
+    while (valor <5) {
+     
+       console.log("While " + valor);// imprime nada 
+       valor++;
+
+    
+    }
+
+
+    valor =10;
+    do{
+        console.log("do while " + valor);//imprime 10 primero hace y sepues pregunta while
+
+        valor ++;
+    } while (valor < 5 );
 
 
 
 
 
-
-
-
+    /**
+     * FIFO : First In First Out
+     * LIFO : Lasti In Firss Out
+     * 
+     */
+const alimentosPerecederos = [];
+//Agregando una caja
+alimentosPerecederos.push("Manzanas lunes");
+alimentosPerecederos.push("Manzanas miercoles");
+//Sacando manzanas del lunes 
+console.log("Sacando a la venta " + alimentosPerecederos.shift()); //lunes
+console.log("Sacando a la venta " + alimentosPerecederos.shift()); //miercoles
+//Tenemos ferreteria
+const productos = ["desarmadores" , "cemento"];
+//Agrego luces navideñas en diciembre
+ productos.push("luces navideñas");
+ console.log("Sacando a la venta " + productos.pop());// luces
+ 
