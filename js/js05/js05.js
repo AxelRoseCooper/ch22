@@ -193,3 +193,21 @@ if ( isOnline && isActive)
     console.log("Estamos in");
 
 isOnline && isActive && console.log("Estamos in");
+
+let edadSobrina = 20;
+console.log( edadSobrina >18 && "Puede votar");
+let numQuesadillas = "3";
+let guisado = "Huitlacoche";
+ console.log("Monse comera la quesadilla  de " + (numQuesadillas && guisado));
+  let nombreConductor = "pax";
+  let tieneLicencia = true;
+  let edadCon = 50;
+  const seRentaAuto = nombreConductor && tieneLicencia && edadCon <60;
+  console.log("Resultado" +seRentaAuto);
+  const quesadillaDatos= {
+     tortilla: "maiz",
+     tieneQueso :true,
+     pica: "poquito",
+  }
+   const picaQuesadilla = quesadillaDatos.pica && "Pica mucho";
+   console.log(picaQuesadilla);
