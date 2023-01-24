@@ -30,7 +30,9 @@ class Usuario {
 
     imprimirDatos(){
        let listadoProductos = "";
-        if( this.#carritoCompras.length > 0){
+       this.#carritoCompras
+        .forEach( producto=> listadoProductos+= producto.imprimirDatos() + "\n" );
+        /* if( this.#carritoCompras.length > 0){
             for (let producto of this.#carritoCompras){
                 listadoProductos += `
                 UUID:\t${producto.uuid}
@@ -38,7 +40,7 @@ class Usuario {
                 Precio:\t${producto.precio}
                 `;
             } 
-        }
+        } */
            
         const obtenerDatos = 
         `=====DATOS DEL USUARIO=====
@@ -54,4 +56,39 @@ class Usuario {
 
 }
 
-export { Usuario };
+
+const datoJson = `{
+    "name":"morpheus",
+    "job":"leader",
+    "skills":[
+       "KunFu",
+       "Capitan"
+    ],
+    "tripulacion":{
+       "operador":"Tanque",
+       "elegido":"Neo"
+    },
+    "vivo":true,
+    "edad":45
+ }`;
+
+ const productosTemporada = `
+ [
+  {
+    "nombre" : "Pantalón roto y pintado",
+    "precio" : 2500,
+    "imagen" : "http://mirepo.com/pantalon.jpg",
+    "descripcion": "Pantalón a la moda, roto por todos lados",
+    "tallas" : ["L","M","CH"]
+  },
+  {
+    "nombre" : "Sudadera",
+    "precio" : 300,
+    "imagen" : "http://mirepo.com/sudarea.jpg",
+    "descripcion": "Sudadera de NFL",
+    "tallas" : ["Unitalla"]
+  }
+ ]
+ `;
+
+export { Usuario, datoJson, productosTemporada };
